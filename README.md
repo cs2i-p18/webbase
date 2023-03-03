@@ -5,7 +5,6 @@ Ensemble de containers pour du développement PHP _vanilla_ avec bases de donné
 * Serveur **Nginx**
 * **PHP**
 * **PostgreSQL** + pgAdmin
-* **MariaDB** + phpMyAdmin
 
 > Sur une base générée par https://phpdocker.io
 
@@ -37,8 +36,6 @@ Ensemble de containers pour du développement PHP _vanilla_ avec bases de donné
 | `php-fpm` | PHP | | |
 | `pgdb` | Serveur de bases de données PostgreSQL | 5432 | 3001
 | `pgadmin` | Interface d'administration pour PostgreSQL | 80 | 5050
-| `mariadb` | Serveur de bases de données MariaDB | 3306 | 3002
-| `phpmyadmin` | Interface d'administration pour MariaDB | 80 | 5051
 
 - Le **port interne** est interne au container.
 - Le **port externe** est exposé par le container.
@@ -98,12 +95,6 @@ make pgshell
 
 # Se connecter à psql dans le container PostgreSQL
 make psql
-
-# Se connecter au container MariaDB
-make myshell
-
-# Se connecter à mysql dans le container MariaDB
-make mysql
 
 # Se connecter au container PHP-FPM
 # (permet notamment d'utiliser Composer)
