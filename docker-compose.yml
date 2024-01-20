@@ -12,7 +12,7 @@ services:
 
     # PostgreSQL
     pgdb:
-      image: postgres:${POSTGRES_VERSION}
+      image: ${POSTGRES_IMAGE}
       restart: always
       working_dir: /application
       ports: 
@@ -26,7 +26,7 @@ services:
 
     # pgAdmin4
     pgadmin:
-      image: dpage/pgadmin4:latest
+      image: ${PGADMIN_IMAGE}
       restart: always
       volumes:
         - pgadmin:/var/lib/pgadmin
